@@ -24,7 +24,7 @@ export default function Footer({ openModal }) {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           <div className="lg:col-span-2">
             <Link to="/" className="inline-block mb-4">
-              <img src="/logo.svg" alt="Omrea Infrastructure" className="h-12 w-auto" />
+              <img src="/logo.png" alt="Omrea Infrastructure" className="h-12 w-auto" />
             </Link>
             <p className="text-slate-400 max-w-md mb-6 leading-relaxed">
               Omrea Infrastructure Private Limited is a construction and infrastructure company

@@ -61,7 +61,7 @@ export default function Navbar({ openModal }) {
     >
       <nav className="flex items-center justify-between h-20 section-padding max-w-7xl mx-auto">
         <Link to="/" className="flex items-center gap-3 shrink-0">
-          <img src="/logo.svg" alt="Omrea Infrastructure" className="h-10 w-auto" />
+          <img src="/logo.png" alt="Omrea Infrastructure" className="h-10 w-auto" />
         </Link>
 
         {/* Desktop nav */}
