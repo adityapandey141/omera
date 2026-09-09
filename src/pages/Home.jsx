@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import MeetDirector from '../components/MeetDirector';
 import CompanyIntro from '../components/CompanyIntro';
 import Services from '../components/Services';
 import Approach from '../components/Approach';
@@ -10,6 +11,7 @@ export default function Home({ openModal }) {
   return (
     <>
       <Hero openModal={openModal} />
+      <MeetDirector />
       <CompanyIntro />
       <Services />
       <Approach />

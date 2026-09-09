@@ -3,9 +3,13 @@ import { MapPin, Mail, Phone, Globe, Linkedin } from 'lucide-react';
 import ContactForm from './ContactForm';
 
 const contactItems = [
-  { icon: MapPin, label: 'Office Address', value: '[Address to be updated]' },
-  { icon: Mail, label: 'Email', value: '[Email to be updated]' },
-  { icon: Phone, label: 'Phone', value: '[Phone to be updated]' },
+  {
+    icon: MapPin,
+    label: 'Office Address',
+    value: 'C/O Shri Mumtajkhan, Noorkhan Ansari Ward, Bhandara, Bhandara, Bhandara, Maharashtra, India, 441904.',
+  },
+  { icon: Mail, label: 'Email', value: 'omerainfra@gmail.com' },
+  { icon: Phone, label: 'Phone', value: '+91 9405613323' },
   { icon: Globe, label: 'Website', value: '[Website to be updated]' },
   { icon: Linkedin, label: 'LinkedIn', value: '[LinkedIn to be updated]' },
 ];
@@ -53,7 +57,7 @@ export default function Contact() {
                     <p className="text-xs text-slate-500 uppercase tracking-wide font-semibold">
                       {item.label}
                     </p>
-                    <p className="text-slate-700 font-medium mt-1">{item.value}</p>
+                    <p className="text-slate-700 font-medium mt-1 break-words">{item.value}</p>
                   </div>
                 </div>
               ))}
