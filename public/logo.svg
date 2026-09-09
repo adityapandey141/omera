@@ -1,0 +1,6 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="0" y="0" width="40" height="40" rx="4" fill="#0B1729"/>
+  <path d="M8 31 L20 8 L32 31" stroke="#E8734A" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M13 23 H27" stroke="#C43F2E" stroke-width="3" stroke-linecap="round"/>
+  <text x="48" y="26" font-family="Inter, sans-serif" font-size="15" font-weight="700" fill="#0B1729">OMREA</text>
+</svg>
