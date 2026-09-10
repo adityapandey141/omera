@@ -1,58 +1,25 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, ArrowRight, X } from 'lucide-react';
-import ProjectModal from './ProjectModal';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const filters = ['All', 'Residential', 'Commercial', 'Industrial', 'Infrastructure', 'Other'];
-
-const projects = [
-  {
-    name: 'Project Name (To Be Updated)',
-    type: 'Commercial',
-    location: 'Location',
-    scope: 'Scope of work to be provided from company records.',
-    status: 'Status',
-    year: 'Year',
-    category: 'Commercial',
-    overview: 'Project overview to be added.',
-  },
-  {
-    name: 'Project Name (To Be Updated)',
-    type: 'Residential',
-    location: 'Location',
-    scope: 'Scope of work to be provided from company records.',
-    status: 'Status',
-    year: 'Year',
-    category: 'Residential',
-    overview: 'Project overview to be added.',
-  },
-  {
-    name: 'Project Name (To Be Updated)',
-    type: 'Infrastructure',
-    location: 'Location',
-    scope: 'Scope of work to be provided from company records.',
-    status: 'Status',
-    year: 'Year',
-    category: 'Infrastructure',
-    overview: 'Project overview to be added.',
-  },
-  {
-    name: 'Project Name (To Be Updated)',
-    type: 'Industrial',
-    location: 'Location',
-    scope: 'Scope of work to be provided from company records.',
-    status: 'Status',
-    year: 'Year',
-    category: 'Industrial',
-    overview: 'Project overview to be added.',
-  },
+const images = [
+  '/project1.jpg',
+  '/project2.jpg',
+  '/project3.jpg',
+  '/project4.jpg',
+  '/project5.jpg',
+  '/project6.jpg',
 ];
 
 export default function Projects() {
-  const [active, setActive] = useState('All');
-  const [selected, setSelected] = useState(null);
+  const [lightbox, setLightbox] = useState(null);
 
-  const filtered = active === 'All' ? projects : projects.filter((p) => p.category === active);
+  const openLightbox = (index) => setLightbox(index);
+  const closeLightbox = () => setLightbox(null);
+  const prevImage = () =>
+    setLightbox((prev) => (prev - 1 + images.length) % images.length);
+  const nextImage = () =>
+    setLightbox((prev) => (prev + 1) % images.length);
 
   return (
     <section id="projects" className="py-20 md:py-28 bg-white">
@@ -62,7 +29,7 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.6 }}
-          className="mb-12"
+          className="text-center max-w-3xl mx-auto mb-14"
         >
           <p className="text-brand-rust font-semibold tracking-widest text-sm uppercase mb-2">
             Portfolio
@@ -70,77 +37,109 @@ export default function Projects() {
           <h2 className="text-xl sm:text-2xl md:text-3xl break-words leading-tight text-balance font-bold text-brand-navy mb-4">
             Our Projects
           </h2>
-          <p className="text-slate-600 text-base md:text-lg max-w-3xl">
+          <p className="text-slate-600 text-base md:text-lg">
             Delivering projects with a focus on quality, execution and client requirements.
           </p>
         </motion.div>
 
-        <div className="flex flex-wrap gap-3 mb-10">
-          {filters.map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActive(filter)}
-              className={`px-5 py-2 rounded-full text-sm font-semibold transition-all border ${
-                active === filter
-                  ? 'bg-brand-rust text-white border-brand-rust'
-                  : 'bg-white text-slate-600 border-slate-200 hover:border-brand-rust hover:text-brand-rust'
-              }`}
+        {/* Gallery grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-5">
+          {images.map((src, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: i * 0.08 }}
+              onClick={() => openLightbox(i)}
+              className="relative group cursor-pointer rounded-xl overflow-hidden aspect-[4/3] bg-slate-200"
             >
-              {filter}
-            </button>
+              <img
+                src={src}
+                alt={`Project ${i + 1}`}
+                className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.parentElement.classList.add('flex', 'items-center', 'justify-center');
+                  const placeholder = document.createElement('span');
+                  placeholder.className = 'text-slate-400 font-semibold text-sm';
+                  placeholder.textContent = `Project ${i + 1}`;
+                  e.target.parentElement.appendChild(placeholder);
+                }}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                <span className="text-white font-semibold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-brand-rust/80 px-4 py-2 rounded-md">
+                  View
+                </span>
+              </div>
+            </motion.div>
           ))}
         </div>
-
-        <motion.div layout className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          <AnimatePresence>
-            {filtered.map((project, i) => (
-              <motion.div
-                key={i}
-                layout
-                initial={{ opacity: 0, y: 24 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, scale: 0.95 }}
-                transition={{ duration: 0.4, delay: i * 0.06 }}
-                className="group rounded-2xl overflow-hidden bg-brand-navy text-white shadow-xl min-w-0"
-              >
-                <div className="h-44 bg-gradient-to-br from-slate-700 to-slate-900 relative">
-                  <div className="absolute inset-0 opacity-30">
-                    <svg viewBox="0 0 400 220" className="w-full h-full" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <rect x="40" y="110" width="70" height="100" stroke="#E8734A" strokeWidth="1.5" />
-                      <rect x="140" y="80" width="90" height="130" stroke="#94a3b8" strokeWidth="1.5" />
-                      <rect x="260" y="100" width="80" height="110" stroke="#E8734A" strokeWidth="1.5" />
-                      <line x1="0" y1="210" x2="400" y2="210" stroke="#E8734A" strokeWidth="2" />
-                    </svg>
-                  </div>
-                </div>
-                <div className="p-6 md:p-8">
-                  <div className="flex items-start justify-between gap-4 mb-4">
-                    <div>
-                      <h3 className="text-xl font-bold mb-1 break-words leading-tight">{project.name}</h3>
-                      <p className="text-slate-400 text-sm">{project.type}</p>
-                    </div>
-                    <span className="text-xs font-semibold bg-white/10 px-3 py-1 rounded-full text-slate-300">
-                      {project.status}
-                    </span>
-                  </div>
-                  <p className="flex items-center gap-2 text-slate-400 text-sm mb-4">
-                    <MapPin size={16} /> {project.location} · {project.year}
-                  </p>
-                  <p className="text-slate-300 text-sm leading-relaxed mb-6">{project.scope}</p>
-                  <button
-                    onClick={() => setSelected(project)}
-                    className="inline-flex items-center gap-2 text-brand-orange hover:text-white font-semibold transition-colors text-sm"
-                  >
-                    View Project <ArrowRight size={16} />
-                  </button>
-                </div>
-              </motion.div>
-            ))}
-          </AnimatePresence>
-        </motion.div>
       </div>
 
-      <ProjectModal project={selected} onClose={() => setSelected(null)} />
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightbox !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 backdrop-blur-sm"
+            onClick={closeLightbox}
+          >
+            {/* Close */}
+            <button
+              onClick={closeLightbox}
+              className="absolute top-6 right-6 z-20 w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+              aria-label="Close"
+            >
+              <X size={22} />
+            </button>
+
+            {/* Prev */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
+              className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+              aria-label="Previous"
+            >
+              <ChevronLeft size={22} />
+            </button>
+
+            {/* Image */}
+            <motion.img
+              key={lightbox}
+              initial={{ opacity: 0, scale: 0.92 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.92 }}
+              transition={{ duration: 0.3 }}
+              src={images[lightbox]}
+              alt={`Project ${lightbox + 1}`}
+              className="max-w-[90vw] max-h-[85vh] object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            {/* Next */}
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
+              className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 hover:bg-white/20 flex items-center justify-center text-white transition-colors"
+              aria-label="Next"
+            >
+              <ChevronRight size={22} />
+            </button>
+
+            {/* Counter */}
+            <p className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white/70 text-sm font-medium">
+              {lightbox + 1} / {images.length}
+            </p>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

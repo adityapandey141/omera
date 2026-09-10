@@ -63,7 +63,7 @@ export default function Footer({ openModal }) {
               ))}
             </ul>
             <p className="font-bold text-lg mb-4">Contact</p>
-            <p className="text-slate-400 text-sm">Masud Mumtajkhan Khan</p>
+            <p className="text-slate-400 text-sm">Masud Patel</p>
             <p className="text-slate-400 text-sm">Director</p>
           </div>
         </div>
