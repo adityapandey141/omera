@@ -43,7 +43,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm text-slate-500 uppercase tracking-wide mb-1">Director</p>
-                <p className="text-xl font-bold text-brand-navy">Masud Patel</p>
+                <p className="text-xl font-bold text-brand-navy">Maksud Patel</p>
               </div>
             </div>
 

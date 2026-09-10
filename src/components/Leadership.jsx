@@ -28,7 +28,7 @@ export default function Leadership() {
             className="order-2 lg:order-1"
           >
             <h3 className="text-2xl md:text-3xl break-words leading-tight font-bold text-brand-navy mb-2">
-              Masud Patel
+              Maksud Patel
             </h3>
             <p className="text-xl text-slate-500 font-medium mb-6">Director</p>
             <p className="text-slate-600 leading-relaxed mb-6">
@@ -54,7 +54,7 @@ export default function Leadership() {
           >
             <img
               src="/maksudpatel.png"
-              alt="Masud Patel"
+              alt="Maksud Patel"
               className="w-full max-w-md h-auto rounded-2xl shadow-2xl object-cover aspect-[3/4]"
             />
           </motion.div>
