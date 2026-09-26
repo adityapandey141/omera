@@ -2,9 +2,11 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
+/* All images are from India — verified Unsplash sources */
 const slides = [
   {
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80',
+    /* Mumbai Coastal Road construction site, Maharashtra */
+    image: 'https://images.unsplash.com/photo-1707669358552-1c72dba27a79?w=1920&q=80',
     tagline: 'Construction & Infrastructure',
     heading: (
       <>
@@ -18,7 +20,8 @@ const slides = [
     text: 'Professional construction contracting and project execution services focused on quality, coordination and client satisfaction.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=1920&q=80',
+    /* Hyderabad towers under construction, Telangana */
+    image: 'https://images.unsplash.com/photo-1688824707674-bb91aa628fdd?w=1920&q=80',
     tagline: 'Quality Execution',
     heading: (
       <>
@@ -32,7 +35,23 @@ const slides = [
     text: 'End-to-end construction support with a structured approach to planning, execution and delivery.',
   },
   {
-    image: 'https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1920&q=80',
+    /* Indian construction workers on building site */
+    image: 'https://images.unsplash.com/photo-1653280662710-1cac52cde6d7?w=1920&q=80',
+    tagline: 'Skilled Workforce',
+    heading: (
+      <>
+        Shaping India&apos;s
+        <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-orange to-brand-rust">
+          Urban Landscape.
+        </span>
+      </>
+    ),
+    text: 'Residential, commercial and infrastructure projects delivered with professionalism and commitment to quality.',
+  },
+  {
+    /* Hyderabad high-rise construction aerial, Telangana */
+    image: 'https://images.unsplash.com/photo-1689066647146-4b7a70a8c498?w=1920&q=80',
     tagline: 'Reliable Partnerships',
     heading: (
       <>
