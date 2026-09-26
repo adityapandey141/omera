@@ -1,33 +1,33 @@
 import { motion } from 'framer-motion';
 
-/* All images are from India — verified Unsplash sources */
+/* All images verified — Indian construction sites from Pexels & Unsplash */
 const showcase = [
   {
-    /* Mumbai Coastal Road construction, Maharashtra */
-    image: 'https://images.unsplash.com/photo-1707669358552-1c72dba27a79?w=800&q=80',
+    /* Construction workers with helmets at site with crane, India */
+    image: 'https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb&w=800',
     title: 'Active Construction Site',
-    desc: 'Large-scale infrastructure project under execution in Mumbai, Maharashtra.',
+    desc: 'Skilled workers coordinating on an active Indian construction site with heavy equipment.',
     tag: 'Under Construction',
   },
   {
-    /* Construction workers on Indian building site */
-    image: 'https://images.unsplash.com/photo-1653280662710-1cac52cde6d7?w=800&q=80',
+    /* Construction workers pouring concrete on high-rise, Mumbai */
+    image: 'https://images.pexels.com/photos/20591230/pexels-photo-20591230.jpeg?auto=compress&cs=tinysrgb&w=800',
     title: 'On-Site Workforce',
-    desc: 'Skilled construction workers coordinating on an active Indian building site.',
+    desc: 'Concrete pouring and structural work on a high-rise building in Mumbai.',
     tag: 'In Progress',
   },
   {
-    /* Hyderabad aerial — under-construction towers */
-    image: 'https://images.unsplash.com/photo-1689066647146-4b7a70a8c498?w=800&q=80',
-    title: 'High-Rise Development',
-    desc: 'Residential and commercial towers rising across the Indian urban skyline.',
+    /* Construction workers at building site, Delhi */
+    image: 'https://images.pexels.com/photos/30592257/pexels-photo-30592257.jpeg?auto=compress&cs=tinysrgb&w=800',
+    title: 'Structural Development',
+    desc: 'Professional construction teams executing building projects across Indian metros.',
     tag: 'Under Construction',
   },
   {
-    /* Completed modern towers, Mumbai skyline */
-    image: 'https://images.unsplash.com/photo-1570168007204-dfb528c6958f?w=800&q=80',
+    /* Modern apartment building, Kozhikode, Kerala */
+    image: 'https://images.pexels.com/photos/33557085/pexels-photo-33557085.jpeg?auto=compress&cs=tinysrgb&w=800',
     title: 'Completed Structures',
-    desc: 'Modern buildings delivered with quality finishing and structural integrity.',
+    desc: 'Modern residential buildings delivered with contemporary design and quality finishing.',
     tag: 'Completed',
   },
 ];

@@ -11,10 +11,10 @@ const metrics = [
 export default function ImpactBanner() {
   return (
     <section className="relative overflow-hidden">
-      {/* Background — Indian cityscape with construction, Hyderabad */}
+      {/* Background — Piling rig at Indian construction site, Faridabad */}
       <div className="absolute inset-0 z-0">
         <img
-          src="https://images.unsplash.com/photo-1689066647146-4b7a70a8c498?w=1920&q=80"
+          src="https://images.pexels.com/photos/29470001/pexels-photo-29470001.jpeg?auto=compress&cs=tinysrgb&w=1920"
           alt=""
           className="w-full h-full object-cover"
         />

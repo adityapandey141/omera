@@ -2,28 +2,28 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
-/* All images are from India — verified Unsplash sources */
+/* All images verified — Indian buildings from Pexels */
 const featured = [
   {
-    /* Glass building under construction, Hi-Tech City, Hyderabad */
-    image: 'https://images.unsplash.com/photo-1665669877756-5f2e42426e81?w=800&q=80',
+    /* Bangalore airport under construction, India */
+    image: 'https://images.pexels.com/photos/18270898/pexels-photo-18270898.jpeg?auto=compress&cs=tinysrgb&w=800',
     label: 'Commercial',
-    title: 'Commercial High-Rise',
-    desc: 'Modern glass-facade commercial tower under construction in an Indian metro city.',
+    title: 'Commercial Infrastructure',
+    desc: 'Modern commercial structures under construction with innovative architectural design in India.',
   },
   {
-    /* Residential towers, Hyderabad aerial */
-    image: 'https://images.unsplash.com/photo-1688824707674-bb91aa628fdd?w=800&q=80',
+    /* Apartment building with colorful balconies, Mumbai, India */
+    image: 'https://images.pexels.com/photos/38179316/pexels-photo-38179316.jpeg?auto=compress&cs=tinysrgb&w=800',
     label: 'Residential',
     title: 'Residential Tower Project',
-    desc: 'Multi-storey residential apartment buildings rising across the Indian urban landscape.',
+    desc: 'Multi-storey residential apartment buildings with modern finishing across Indian cities.',
   },
   {
-    /* Mumbai Lower Parel skyline — skyscrapers under construction */
-    image: 'https://images.unsplash.com/photo-1764118811041-712974fea74c?w=800&q=80',
+    /* Coastal luxury apartments, Mumbai, India */
+    image: 'https://images.pexels.com/photos/32642371/pexels-photo-32642371.jpeg?auto=compress&cs=tinysrgb&w=800',
     label: 'Infrastructure',
-    title: 'Urban Infrastructure',
-    desc: 'High-rise infrastructure development shaping the skyline of modern Indian cities.',
+    title: 'Urban Development',
+    desc: 'Premium residential and infrastructure projects shaping the modern Indian skyline.',
   },
 ];
 

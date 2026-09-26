@@ -2,11 +2,11 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
-/* All images are from India — verified Unsplash sources */
+/* All images verified — Indian construction sites from Pexels & Unsplash */
 const slides = [
   {
-    /* Mumbai Coastal Road construction site, Maharashtra */
-    image: 'https://images.unsplash.com/photo-1707669358552-1c72dba27a79?w=1920&q=80',
+    /* Piling rig at construction site, Faridabad, Haryana, India */
+    image: 'https://images.pexels.com/photos/29470001/pexels-photo-29470001.jpeg?auto=compress&cs=tinysrgb&w=1920',
     tagline: 'Construction & Infrastructure',
     heading: (
       <>
@@ -20,8 +20,8 @@ const slides = [
     text: 'Professional construction contracting and project execution services focused on quality, coordination and client satisfaction.',
   },
   {
-    /* Hyderabad towers under construction, Telangana */
-    image: 'https://images.unsplash.com/photo-1688824707674-bb91aa628fdd?w=1920&q=80',
+    /* Construction workers pouring concrete, Mumbai, India */
+    image: 'https://images.pexels.com/photos/20591230/pexels-photo-20591230.jpeg?auto=compress&cs=tinysrgb&w=1920',
     tagline: 'Quality Execution',
     heading: (
       <>
@@ -35,8 +35,8 @@ const slides = [
     text: 'End-to-end construction support with a structured approach to planning, execution and delivery.',
   },
   {
-    /* Indian construction workers on building site */
-    image: 'https://images.unsplash.com/photo-1653280662710-1cac52cde6d7?w=1920&q=80',
+    /* Indian construction workers at site with crane */
+    image: 'https://images.pexels.com/photos/32826199/pexels-photo-32826199.jpeg?auto=compress&cs=tinysrgb&w=1920',
     tagline: 'Skilled Workforce',
     heading: (
       <>
@@ -50,8 +50,8 @@ const slides = [
     text: 'Residential, commercial and infrastructure projects delivered with professionalism and commitment to quality.',
   },
   {
-    /* Hyderabad high-rise construction aerial, Telangana */
-    image: 'https://images.unsplash.com/photo-1689066647146-4b7a70a8c498?w=1920&q=80',
+    /* Aerial view of Mumbai residential buildings at dusk */
+    image: 'https://images.pexels.com/photos/37833897/pexels-photo-37833897.jpeg?auto=compress&cs=tinysrgb&w=1920',
     tagline: 'Reliable Partnerships',
     heading: (
       <>
