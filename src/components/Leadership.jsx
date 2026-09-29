@@ -32,15 +32,23 @@ export default function Leadership() {
             </h3>
             <p className="text-xl text-slate-500 font-medium mb-6">Director</p>
             <p className="text-slate-600 leading-relaxed mb-6">
-              A professional biography will be updated here once verified information is provided.
-              The leadership team is responsible for the company&apos;s execution, operations and
-              growth strategy.
+              Maksud Patel is the Director of Omrea Infrastructure Private Limited, leading
+              the company&apos;s construction contracting and infrastructure operations. With a
+              strong commitment to quality execution and professional project management, he
+              oversees all aspects of project delivery — from planning and resource coordination
+              to on-site execution and client relationships.
+            </p>
+            <p className="text-slate-600 leading-relaxed mb-6">
+              His hands-on approach and focus on building long-term partnerships with clients,
+              contractors and stakeholders has been instrumental in establishing Omrea as a
+              dependable name in the construction sector across Maharashtra.
             </p>
 
             <div className="p-5 bg-brand-sand rounded-xl border-l-4 border-brand-rust">
               <p className="text-slate-700 font-medium">
-                &ldquo;Placeholder for verified quote or leadership vision. To be updated from the
-                company profile.&rdquo;
+                &ldquo;Our commitment is simple — deliver every project with integrity, quality
+                and professionalism. We believe in building structures that stand the test of time
+                and relationships that grow stronger with every project.&rdquo;
               </p>
             </div>
           </motion.div>

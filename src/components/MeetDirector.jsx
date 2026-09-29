@@ -48,9 +48,10 @@ export default function MeetDirector() {
             </h3>
             <p className="text-xl text-slate-500 font-medium mb-6">Director</p>
             <p className="text-slate-600 leading-relaxed mb-6">
-              A professional biography will be updated here once verified information is provided.
-              The leadership team is responsible for the company&apos;s execution, operations and
-              growth strategy.
+              Maksud Patel is the Director of Omrea Infrastructure Private Limited, bringing
+              hands-on experience in construction contracting and infrastructure project execution.
+              Under his leadership, the company has established itself as a dependable partner
+              for quality-focused construction services across Maharashtra.
             </p>
 
             <Link

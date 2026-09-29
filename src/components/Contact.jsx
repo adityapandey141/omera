@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { MapPin, Mail, Phone, Globe, Linkedin } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
 import ContactForm from './ContactForm';
 
 const contactItems = [
@@ -10,8 +10,7 @@ const contactItems = [
   },
   { icon: Mail, label: 'Email', value: 'omerainfra@gmail.com' },
   { icon: Phone, label: 'Phone', value: '+91 9405613323' },
-  { icon: Globe, label: 'Website', value: '[Website to be updated]' },
-  { icon: Linkedin, label: 'LinkedIn', value: '[LinkedIn to be updated]' },
+
 ];
 
 export default function Contact() {
